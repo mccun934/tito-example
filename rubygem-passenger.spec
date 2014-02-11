@@ -18,7 +18,7 @@
 
 Summary: Passenger Ruby web application server
 Name: %{?scl_prefix}rubygem-%{gem_name}
-Version: 4.0.6
+Version: 4.0.7
 Release: 1%{?dist}
 Group: System Environment/Daemons
 # Passenger code uses MIT license.
@@ -400,6 +400,10 @@ rake test --trace ||:
 %endif
 
 %changelog
+* Tue Feb 11 2014 Mike McCune <mmccune@redhat.com> 4.0.7-1
+- adding files (mmccune@redhat.com)
+- add config (mmccune@redhat.com)
+
 * Tue Feb 11 2014 Mike McCune <mmccune@redhat.com> 4.0.6-1
 - new package built with tito
 
