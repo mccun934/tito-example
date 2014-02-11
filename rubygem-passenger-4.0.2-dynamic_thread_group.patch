@@ -1,0 +1,15 @@
+diff -urp passenger-release-4.0.2.orig/test/oxt/dynamic_thread_group_test.cpp passenger-release-4.0.2/test/oxt/dynamic_thread_group_test.cpp
+--- passenger-release-4.0.2.orig/test/oxt/dynamic_thread_group_test.cpp	2013-05-07 11:12:21.000000000 -0500
++++ passenger-release-4.0.2/test/oxt/dynamic_thread_group_test.cpp	2013-05-14 14:18:51.960000000 -0500
+@@ -103,9 +103,9 @@ namespace tut {
+ 	}
+ 	
+ 	static void create_threads(dynamic_thread_group *group) {
+-		for (int i = 1000; i >= 0; i--) {
++		for (int i = 100; i >= 0; i--) {
+ 			boost::function<void ()> f(boost::bind(do_nothing, i * 1000));
+-			group->create_thread(f, "", 256 * 1024);
++			group->create_thread(f, "", 8 * 1024);
+ 		}
+ 	}
+ 	
