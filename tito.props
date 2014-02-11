@@ -1,0 +1,3 @@
+[buildconfig]
+default_builder = tito.builder.NoTgzBuilder
+
